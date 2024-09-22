@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Разработка веб-приложений</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/mountain.png" alt="Логотип">
+        </div>
+        <div class="group-name">Группа ЭФБО-09-23</div>
+        <div class="student-name">Джанкёзов Руслан Маратович</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index2.html">Главная</a></li>
+            <li><a href="#semester1">Первый семестр</a></li>
+            <li><a href="#semester2">Второй семестр</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="#auth">Авторизация</a></li>
+        </ul>
+    </nav>
+    <main role="main">
+        <h2>Навигация по странице</h2>
+        <ul>
+            <li><a href="#frontend">Фронтенд</a></li>
+            <li><a href="#backend">Бэкенд</a></li>
+        </ul>
+
+    <main>
+        <section id="services" class="section">
+            <h1>Разработка веб-приложений</h1>
+            <div class="service-grid">
+                <div class="service-item">
+                    <img src="img/visitka.jpg" alt="Сайт-визитка">
+                    <h3>Сайт-визитка</h3>
+                    <a href="#" class="order-button" onclick="openModal('Сайт-визитка')">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <img src="img/ECorp.png" alt="Корпоративный сайт">
+                    <h3>Корпоративный сайт</h3>
+                    <a href="#" class="order-button" onclick="openModal('Корпоративный сайт')">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <img src="img/wb.jpg" alt="Интернет-магазин">
+                    <h3>Интернет-магазин</h3>
+                    <a href="#" class="order-button" onclick="openModal('Интернет-магазин')">Заказать</a>
+                </div>
+            </div>
+        
+
+            <p>Веб-приложение --- клиент-серверное приложение, в котором клиент взаимодействует с веб-сервером при помощи браузера. Логика веб-приложения распределена между сервером и клиентом, хранение данных осуществляется преимущественно на сервере, обмен информацией происходит по сети. Одним из преимуществ такого подхода является тот факт, что клиенты не зависят от конкретной операционной системы пользователя, поэтому веб-приложения являются межплатформенными службами.</p>
+
+            <p>Выше представлены некоторые из видов веб-приложений.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Джанкёзов Руслан, 2024</p>
+        <div class="social-icons"></div>
+            <a href="https://t.me/ayori13" target="_blank" rel="noopener noreferrer">
+                <img src="img/tg.png" alt="TG">
+            </a>
+            <a href="https://vk.com/the.merlin" target="_blank" rel="noopener noreferrer">
+                <img src="img/vk.png" alt="VK">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Заказать разработку веб-приложения</h2>
+            <form id="orderForm">
+                <input type="hidden" id="serviceType" name="serviceType">
+                
+                <label for="name">Как вас зовут:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Ваш e-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="country">Страна:</label>
+                <select id="country" name="country" required>
+                    <option value="">Выберите страну</option>
+                    <option value="Россия">Россия</option>
+                    <option value="Беларусь">Беларусь</option>
+                    <option value="Казахстан">Казахстан</option>
+                </select>
+                
+                <label for="date">Дата:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="comment">Комментарий:</label>
+                <textarea id="comment" name="comment" rows="4"></textarea>
+                
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

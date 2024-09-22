@@ -1,0 +1,420 @@
+/* Общие стили */
+:root {
+  --primary-color: #6d2932;
+  --secondary-color: #561c24;
+  --accent-color: #e74c3c;
+  --background-color: #E8D8C4;
+  --text-color: #561c24;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Заголовок */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 50px;
+  vertical-align: middle;
+}
+
+.group-name, .student-name {
+  display: inline-block;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+/* Навигация */
+nav {
+  background-color: var(--secondary-color);
+  padding: 0.5rem 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* Основной контент */
+main {
+  padding: 2rem 0;
+}
+
+h1, h2, h3 {
+  color: var(--secondary-color);
+}
+
+/* Сетка услуг */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-item h3 {
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.order-button {
+  display: block;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #c0392b;
+}
+
+/* Форма заказа */
+#order-form {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #6d2932;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.social-icons img {
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Стили для модального окна */
+.modal {
+  display: none; /* Скрываем модальное окно по умолчанию */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; /* Центрируем окно */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px; /* Максимальная ширина окна */
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover, .close:focus {
+  color: black;
+}
+
+/* Стиль для кнопок "Заказать" */
+.order-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #7b0425; /* бордовый фон */
+  border: none;
+  border-radius: 25px; /* Закругленные углы */
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px #561c24; /* Тень кнопки */
+}
+
+/* Эффект наведения */
+.order-button:hover {
+  background-color: #61242c; /* Более тёмный при наведении */
+  transform: scale(1.05); /* Небольшое увеличение при наведении */
+  box-shadow: 0 6px 20px #561c24; /* Увеличение тени */
+}
+
+/* Эффект при клике */
+.order-button:active {
+  transform: scale(0.98); /* Немного уменьшаем при клике */
+  box-shadow: 0 3px 10px #561c24; /* Меняем тень */
+}
+/* Сетка услуг - горизонтальное расположение */
+.service-grid {
+  display: flex; /* Горизонтальное выравнивание */
+  justify-content: space-between; /* Равномерное распределение пространства */
+  align-items: flex-start; /* Выровнять элементы по верхнему краю */
+  gap: 20px; /* Отступы между элементами */
+  padding: 20px 0;
+}
+
+/* Каждый элемент услуги */
+.service-item {
+  flex: 1 1 30%; /* Каждый элемент занимает 30% ширины контейнера */
+  max-width: 30%; /* Максимальная ширина 30% */
+  box-sizing: border-box; /* Учитываем паддинги и границы */
+  text-align: center; /* Текст по центру */
+  padding: 10px;
+  background-color: #f9f9f9; /* Светлый фон для каждого элемента */
+  border-radius: 10px; /* Закругленные углы */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  transition: transform 0.3s ease;
+}
+
+/* Изображения в карточках услуг */
+.service-item img {
+  width: 100%;
+  height: auto; /* Пропорционально уменьшаем изображение */
+  border-radius: 8px;
+}
+
+/* Эффект при наведении на карточку */
+.service-item:hover {
+  transform: scale(1.05); /* Небольшое увеличение при наведении */
+}
+
+.service-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Кнопки заказа */
+.service-item .order-button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+/* Основные стили модального окна */
+.modal {
+  display: none; /* По умолчанию модальное окно скрыто */
+  position: fixed;
+  z-index: 1000; /* Поверх всех элементов */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Прокрутка для всего окна */
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный тёмный фон */
+}
+
+/* Стили для контента модального окна */
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto; /* Центрирование окна с отступом сверху */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 80%; /* Ширина контента формы 80% от экрана */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-height: 90vh; /* Максимальная высота 90% от высоты экрана */
+  overflow-y: auto; /* Прокрутка по вертикали для формы */
+}
+
+/* Стиль для кнопки закрытия */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Общие стили для полей ввода */
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"],
+.modal-content input[type="date"],
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+/* Прокрутка формы, если она превышает экран */
+.modal-content {
+  overflow-y: auto; /* Вертикальная прокрутка, если контент превышает доступное пространство */
+  max-height: 80vh; /* Максимальная высота контента — 80% высоты экрана */
+}
+
+/* Стили для кнопки "Отправить" */
+.modal-content button {
+  background-color: #8a2532;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.modal-content button:hover {
+  background-color: #561c24;
+  transform: scale(1.05);
+}
+
+
+
+

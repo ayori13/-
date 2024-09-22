@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ веб-приложения</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Header content (same as in services.html) -->
+    </header>
+
+    <nav>
+        <!-- Navigation content (same as in services.html) -->
+    </nav>
+
+    <main role="main">
+        <section id="order-form" class="section">
+            <h1>Разработка веб-приложения</h1>
+            <p>Заполните форму, и мы обязательно свяжемся с вами в ближайшее время для уточнения деталей</p>
+
+            <form id="web-app-order" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Как вас зовут</label>
+                    <input type="text" id="name" name="name" placeholder="например, Иванов Иван Иванович" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Ваш e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="test@mail.ru" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 919 999 99 99" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Страна</label>
+                    <select id="country" name="country" required>
+                        <option value="Россия">Россия</option>
+                        <option value="Казахстан">Казахстан</option>
+                        <option value="Беларусь">Беларусь</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Дата</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Комментарий</label>
+                    <textarea id="comment" name="comment" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Согласен на обработку моих персональных данных</label>
+                </div>
+
+                <button type="submit" class="submit-button">Отправить заявку</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content (same as in services.html) -->
+    </footer>
+
+    <script>
+        // This script will populate the form with the selected service
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const service = urlParams.get('service');
+            if (service) {
+                document.getElementById('comment').value = `Интересует разработка: ${service}`;
+            }
+        }
+    </script>
+</body>
+</html>
