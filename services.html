@@ -3,110 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Услуги - Разработка веб-приложений</title>
+    <title> Услуги - Сайт Джанкёзова Руслана</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="img/mountain.png" alt="Логотип">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="img/mountain.png" alt="Логотип">
+            </div>
+            <div class="student-info">
+                <span class="group-name">Группа ЭФБО-09-23</span>
+                <span class="student-name">Джанкёзов Руслан</span>
+            </div>
         </div>
-        <div class="group-name">Группа ЭФБО-09-23</div>
-        <div class="student-name">Джанкёзов Руслан Маратович</div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index2.html">Главная</a></li>
-            <li><a href="#semester1">Первый семестр</a></li>
-            <li><a href="#semester2">Второй семестр</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="#auth">Авторизация</a></li>
-        </ul>
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index2.html">Главная</a></li>
+                <li><a href="semester1.html">Первый семестр</a></li>
+                <li><a href="#semester2">Второй семестр</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="#auth">Авторизация</a></li>
+                <li><a href="prog.html">Программа</a></li>
+            </ul>
+        </div>
     </nav>
-    <main role="main">
-        <h2>Навигация по странице</h2>
-        <ul>
-            <li><a href="#frontend">Фронтенд</a></li>
-            <li><a href="#backend">Бэкенд</a></li>
-        </ul>
+    
+    <main class="container" role="main">
+        <section id="dev-types" class="section">
+            <h2>Типы разработки</h2>
+            <div class="dev-types">
+                <a href="index2.html#frontend" class="dev-type-button frontend-button">Фронтенд</a>
+                <a href="index2.html#backend" class="dev-type-button backend-button">Бэкенд</a>
+            </div>
+        </section>
 
-    <main>
         <section id="services" class="section">
             <h1>Разработка веб-приложений</h1>
+            <div class="grid-container">
+                <div class="grid-item">
+                  <h3>Заголовок 1</h3>
+                  <p>Описание услуги 1</p>
+                </div>
+                <div class="grid-item">
+                  <h3>Заголовок 2</h3>
+                  <p>Описание услуги 2</p>
+                </div>
+                <div class="grid-item">
+                  <h3>Заголовок 3</h3>
+                  <p>Описание услуги 3</p>
+                </div>
+                <div class="grid-item">
+                  <h3>Заголовок 4</h3>
+                  <p>Описание услуги 4</p>
+                  <img src="img/patrick.png" alt="Изображение услуги" class="grid-image">
+                </div>
+                <div class="grid-item">
+                  <h3>Заголовок 5</h3>
+                  <p>Описание услуги 5</p>
+                </div>
+                <div class="grid-item">
+                  <h3>Заголовок 6</h3>
+                  <p>Описание услуги 6</p>
+                </div>
+              </div>
+              
             <div class="service-grid">
                 <div class="service-item">
-                    <img src="img/visitka.jpg" alt="Сайт-визитка">
+                    <img src="img/patrick.png" alt="Сайт-визитка">
                     <h3>Сайт-визитка</h3>
-                    <a href="#" class="order-button" onclick="openModal('Сайт-визитка')">Заказать</a>
+                    <button class="order-button" onclick="openModal('Сайт-визитка')">Заказать</button>
                 </div>
                 <div class="service-item">
-                    <img src="img/ECorp.png" alt="Корпоративный сайт">
+                    <img src="img/img2.jpg" alt="Корпоративный сайт">
                     <h3>Корпоративный сайт</h3>
-                    <a href="#" class="order-button" onclick="openModal('Корпоративный сайт')">Заказать</a>
+                    <button class="order-button" onclick="openModal('Корпоративный сайт')">Заказать</button>
                 </div>
                 <div class="service-item">
-                    <img src="img/wb.jpg" alt="Интернет-магазин">
+                    <img src="img/amazon.jpg" alt="Интернет-магазин">
                     <h3>Интернет-магазин</h3>
-                    <a href="#" class="order-button" onclick="openModal('Интернет-магазин')">Заказать</a>
+                    <button class="order-button" onclick="openModal('Интернет-магазин')">Заказать</button>
                 </div>
             </div>
-        
-
-            <p>Веб-приложение --- клиент-серверное приложение, в котором клиент взаимодействует с веб-сервером при помощи браузера. Логика веб-приложения распределена между сервером и клиентом, хранение данных осуществляется преимущественно на сервере, обмен информацией происходит по сети. Одним из преимуществ такого подхода является тот факт, что клиенты не зависят от конкретной операционной системы пользователя, поэтому веб-приложения являются межплатформенными службами.</p>
-
+            <p>Веб-приложение — клиент-серверное приложение, в котором клиент взаимодействует с веб-сервером при помощи браузера. Логика веб-приложения распределена между сервером и клиентом, хранение данных осуществляется преимущественно на сервере, обмен информацией происходит по сети.
+Одним из преимуществ такого подхода является тот факт, что клиенты не зависят от конкретной операционной системы пользователя, поэтому веб-приложения являются межплатформенными службами.</p>
             <p>Выше представлены некоторые из видов веб-приложений.</p>
         </section>
     </main>
 
     <footer>
-        <p>© Джанкёзов Руслан, 2024</p>
-        <div class="social-icons"></div>
-            <a href="https://t.me/ayori13" target="_blank" rel="noopener noreferrer">
-                <img src="img/tg.png" alt="TG">
-            </a>
-            <a href="https://vk.com/the.merlin" target="_blank" rel="noopener noreferrer">
-                <img src="img/vk.png" alt="VK">
-            </a>
+        <div class="container">
+            <p>© Джанкёзов Руслан, 2024</p>
+            <div class="social-icons">
+                <a href="https://t.me/ayori13" target="_blank" rel="noopener noreferrer">
+                    <img src="img/tg.png" alt="Telegram">
+                </a>
+                <a href="https://vk.com/the.merlin" target="_blank" rel="noopener noreferrer">
+                    <img src="img/vk.png" alt="VKontakte">
+                </a>
+            </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 
-    <!-- Модальное окно -->
+
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2>Заказать разработку веб-приложения</h2>
-            <form id="orderForm">
-                <input type="hidden" id="serviceType" name="serviceType">
-                
-                <label for="name">Как вас зовут:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Ваш e-mail:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" required>
-                
-                <label for="country">Страна:</label>
-                <select id="country" name="country" required>
-                    <option value="">Выберите страну</option>
-                    <option value="Россия">Россия</option>
-                    <option value="Беларусь">Беларусь</option>
-                    <option value="Казахстан">Казахстан</option>
-                </select>
-                
-                <label for="date">Дата:</label>
-                <input type="date" id="date" name="date" required>
-                
-                <label for="comment">Комментарий:</label>
-                <textarea id="comment" name="comment" rows="4"></textarea>
-                
-                <button type="submit">Отправить</button>
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="name">Как вас зовут:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Ваш e-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Страна:</label>
+                    <select id="country" name="country" required>
+                        <option value="">Выберите страну</option>
+                        <option value="Россия">Россия</option>
+                        <option value="Беларусь">Беларусь</option>
+                        <option value="Казахстан">Казахстан</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Дата:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Комментарий:</label>
+                    <textarea id="comment" name="comment"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Отправить</button>
             </form>
+            <div id="success-message" style="display: none;">
+                Спасибо за заказ!
+            </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

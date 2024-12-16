@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Семестр 1 - Сайт Джанкёзова Руслана</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="scrollToTop" aria-label="Прокрутить вверх"></button>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="img/mountain.png" alt="Логотип">
+            </div>
+            <div class="student-info">
+                <span class="group-name">Группа ЭФБО-09-23</span>
+                <span class="student-name">Джанкёзов Руслан</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index2.html">Главная</a></li>
+                <li><a href="semester1.html">Первый семестр</a></li>
+                <li><a href="#semester2">Второй семестр</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="#auth">Авторизация</a></li>
+                <li><a href="prog.html">Программа</a></li>
+            </ul>
+        </div>
+    </nav>
+    <button class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <button id="secondSemesterButton" class="btn btn-primary mt-3">Посмотреть практики второго семестра</button>
+    <main class="container">
+        <h1 class="semestr1">Первый семестр</h1>
+
+        <div class="input-group mb-3">
+            <input id="lectureInput" type="text" class="form-control" placeholder="Введите тему лекции">
+            <button id="addLectureButton" class="btn btn-outline-secondary" type="button">Добавить лекцию</button>
+        </div>
+        <div class="accordion mb-4" id="lecturesAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button title-lectures" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLectures">
+                        Лекции
+                    </button>                    
+                </h2>
+                <div id="collapseLectures" class="accordion-collapse collapse show" data-bs-parent="#lecturesAccordion">
+                    <div class="accordion-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>№</th>
+                                        <th>Тема</th>
+                                        <th>Посещение</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="lecturesTableBody">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Основы языка HTML</td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="lecture11">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Углубленное изучение HTML</td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="lecture21">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Основы работы с CSS</td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="lecture21">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Адаптивная верстка с Flexbox и Grid Layout</td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="lecture21">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Bootstrap - работа с фреймворком</td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="lecture21">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Основы JavaScript</td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="lecture21">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Работа с DOM и событиями в JavaScriptL</td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="lecture21">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Введение в GitHub и GitHub Pages</td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="lecture21">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="input-group mb-3">
+            <input id="practiceInput" type="text" class="form-control" placeholder="Введите тему практики">
+            <button id="addPracticeButton" class="btn btn-outline-secondary" type="button">Добавить практику</button>
+        </div>
+        <div class="accordion mb-4" id="practicesAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button title-practices" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePractices">
+                        Практики
+                    </button>                    
+                </h2>
+                <div id="collapsePractices" class="accordion-collapse collapse show" data-bs-parent="#practicesAccordion">
+                    <div class="accordion-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-purple">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>№</th>
+                                        <th>Тема</th>
+                                        <th>Посещение</th>
+                                        <th>Выполнение</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="practicesTableBody">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Основы языка HTML</td>
+                                        <td>
+                                            <select class="form-select attendance-select">
+                                                <option selected>Статус</option>
+                                                <option value="present">Присутствовал</option>
+                                                <option value="absent">Отсутствовал</option>
+                                                <option value="valid">Уважительная</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="form-select grade-select">
+                                                <option selected>Оценка</option>
+                                                <option value="5">Отлично</option>
+                                                <option value="4">Хорошо</option>
+                                                <option value="3">Удовлетворительно</option>
+                                                <option value="2">Неудовлетворительно</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Формы и кнопки в HTML</td>
+                                        <td>
+                                            <select class="form-select attendance-select">
+                                                <option selected>Статус</option>
+                                                <option value="present">Присутствовал</option>
+                                                <option value="absent">Отсутствовал</option>
+                                                <option value="valid">Уважительная</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="form-select grade-select">
+                                                <option selected>Оценка</option>
+                                                <option value="5">Отлично</option>
+                                                <option value="4">Хорошо</option>
+                                                <option value="3">Удовлетворительно</option>
+                                                <option value="2">Неудовлетворительно</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Таблицы и интерактивные элементы HTML</td>
+                                        <td>
+                                            <select class="form-select attendance-select">
+                                                <option selected>Статус</option>
+                                                <option value="present">Присутствовал</option>
+                                                <option value="absent">Отсутствовал</option>
+                                                <option value="valid">Уважительная</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="form-select grade-select">
+                                                <option selected>Оценка</option>
+                                                <option value="5">Отлично</option>
+                                                <option value="4">Хорошо</option>
+                                                <option value="3">Удовлетворительно</option>
+                                                <option value="2">Неудовлетворительно</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+              
+        <div class="section practices">
+        <div class="image-slider">
+            <div class="slider-container">
+              <div class="slider-wrapper">
+                <div class="slide">
+                  <img src="img/slide1.jpg" alt="Слайд 1">
+                </div>
+                <div class="slide">
+                  <img src="img/slide2.jpg" alt="Слайд 2">
+                </div>
+                <div class="slide">
+                  <img src="img/slide3.jpg" alt="Слайд 3">
+                </div>
+              </div>
+              <button class="slider-button prev">&lt;</button>
+              <button class="slider-button next">&gt;</button>
+              <div class="slider-dots"></div>
+            </div>
+          </div>
+          
+          <section class="mb-5">
+            <h2>Занятия проходят по адресу</h2>
+            <p>г. Москва проспект Вернадского 78</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4028.4317471094573!2d37.49137105379566!3d55.663642797380604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54d0976c38e75%3A0xe7ab9677c540cd7!2z0JzQuNGA0Y3QsCwg0JrQvtGA0L_Rg9GBINCQ!5e0!3m2!1sru!2sru!4v1727089503475!5m2!1sru!2sru" width="100%" height="400" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <section class>
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Рабочая программа</h2>
+                    <div class="ratio ratio-16x9">
+                        <object type="application/pdf" data="jojo.pdf">
+                            <p>PDF не может быть отображен. <a href="jojo.pdf">Скачайте PDF</a></p>
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© Джанкёзов Руслан, 2024</p>
+            <div class="social-icons">
+                <a href="https://t.me/ayori13" target="_blank" rel="noopener noreferrer">
+                    <img src="img/tg.png" alt="TG">
+                </a>
+                <a href="https://vk.com/the.merlin" target="_blank" rel="noopener noreferrer">
+                    <img src="img/vk.png" alt="VK">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootsstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
