@@ -1,67 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<button id="scrollToTop" aria-label="Прокрутить вверх"></button>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт Джанкёзова Руслана</title>
+    <title> Главная - Сайт Джанкёзова Руслана</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="img/mountain.png" alt="Логотип">
-        </div>
-        <div class="group-name">
-            Группа ЭФБО-09-23
-        </div>
-        <div class="student-name">
-            Джанкёзов Руслан
+        <div class="container header-content">
+            <div class="logo">
+                <img src="img/mountain.png" alt="Логотип">
+            </div>
+            <div class="student-info">
+                <span class="group-name">Группа ЭФБО-09-23</span>
+                <span class="student-name">Джанкёзов Руслан</span>
+            </div>
         </div>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#home">Главная</a></li>
-            <li><a href="#semester1">Первый семестр</a></li>
-            <li><a href="#semester2">Второй семестр</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="#auth">Авторизация</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <aside>
-            <h3>Навигация по странице</h3>
+    
+    <nav class="main-nav">
+        <div class="container">
             <ul>
-                <li><a href="#frontend">Фронтенд</a></li>
-                <li><a href="#backend">Бэкенд</a></li>
+                <li><a href="index2.html">Главная</a></li>
+                <li><a href="semester1.html">Первый семестр</a></li>
+                <li><a href="#semester2">Второй семестр</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="#auth">Авторизация</a></li>
+                <li><a href="prog.html">Программа</a></li>
             </ul>
-        </aside>
+        </div>
+    </nav>
+    <button class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-        <section id="home">
-            <h1>Добро пожаловать на мой сайт</h1>
-            <img src="img/avatar.png" alt="Аватар" class="avatar">
+    <main class="container" role="main">
+        <section id="home" class="section">
+            <h1>Добро пожаловать на наш сайт!</h1>
+            <img src="img/avatar.png" alt="Аватар" class="avatar" id="studentPhoto">
             <p>Меня зовут Джанкёзов Руслан и я начинающий специалист по веб-разработке.</p>
-            
-            <section id="frontend">
-                <h2>Фронтенд</h2>
-                <p>Фронтенд (или клиентская часть) — это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать интерактивные и привлекательные интерфейсы. Основная задача фронтенда — обеспечить удобство использования и эстетическую привлекательность.</p>
-            </section>
-
-            <section id="backend">
-                <h2>Бэкенд</h2>
-                <p>Бэкенд (или серверная часть) — это "за кулисами" веб-приложения. Он отвечает за обработку данных, управление пользователями и взаимодействие с базами данных. Бэкенд разработчики используют языки программирования, такие как Python, Ruby, Java или PHP, а также фреймворки и базы данных для создания логики приложения. Основная задача бэкенда — обеспечить стабильную работу приложения и безопасность данных.</p>
-            </section>
         </section>
     </main>
+        <main class="container">
+            <section id="dev-types" class="section">
+                <h2>Типы разработки</h2>
+                <div class="dev-types">
+                    <a href="#frontend" class="dev-type-button frontend-button">Фронтенд</a>
+                    <a href="#backend" class="dev-type-button backend-button">Бэкенд</a>
+                </div>
+            </section>
 
+        <section id="frontend" class="dev-section">
+            <div class="dev-video">
+                <video controls>
+                    <source src="video/frontend.webm" type="video/mp4">
+                    Ваш браузер не поддерживает видео тег.
+                </video>
+            </div>
+            <div class="dev-description">
+                <h2>Фронтенд</h2>
+                <p>Фронтенд (или клиентская часть) — это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать интерактивные и привлекательные интерфейсы. Основная задача фронтенда — обеспечить удобство использования и эстетическую привлекательность.</p>
+            </div>
+        </section>
+
+        <section id="backend" class="dev-section">
+            <div class="dev-video">
+                <video controls>
+                    <source src="video/backend.webm" type="video/mp4">
+                    Ваш браузер не поддерживает видео тег.
+                </video>
+            </div>
+            <div class="dev-description">
+                <h2>Бэкенд</h2>
+                <p>Бэкенд (или серверная часть) — это "за кулисами" веб-приложения. Он отвечает за обработку данных, управление пользователями и взаимодействие с базами данных. Бэкенд разработчики используют языки программирования, такие как Python, Ruby, Java или PHP, а также фреймворки и базы данных для создания логики приложения. Основная задача бэкенда — обеспечить стабильную работу приложения и безопасность данных.</p>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>&copy; Джанкёзов Руслан, 2024</p>
-        <div class="social-icons">
-            <a href="https://t.me/ayori13" target="_blank" rel="noopener noreferrer"><img src="img/tg.png" alt="TG" /></a>
-            <a href="hhttps://vk.com/the.merlin" target="_blank" rel="noopener noreferrer"><img src="img/vk.png" alt="VK" /></a>
+        <div class="container">
+            <p>&copy; Джанкёзов Руслан, 2024</p>
+            <div class="social-icons">
+                <a href="https://t.me/ayori13" target="_blank" rel="noopener noreferrer">
+                    <img src="img/tg.png" alt="Telegram">
+                </a>
+                <a href="https://vk.com/the.merlin" target="_blank" rel="noopener noreferrer">
+                    <img src="img/vk.png" alt="VKontakte">
+                </a>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+    <script src="practice-tasks.js"></script>
 </body>
 </html>
